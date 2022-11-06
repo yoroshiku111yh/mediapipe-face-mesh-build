@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Spark Ar but in website basic</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+
+    
+
+        <link rel="stylesheet" href="assets/css/app.css">
+    </head>
+
+<body class="mediapipe__wrapper">
+
+    <header class=""></header>
+    <!-- ... the rest of the HTML page ... -->
+    	<main id="main" data-module="mediapipeFace">
+		<div>
+			<p style="color : #fff">Try mini game ?<input type="radio" class="js-radio-box" name="effectShow" value="mini-game" id="checkbox1"/></p>
+			<p style="color : #fff">Hat 3d wrong perspective<input type="radio" class="js-radio-box" name="effectShow" id="checkbox2" value="hat"/></p>
+			<p style="color : #fff">Glasses 3d right perspective<input type="radio" class="js-radio-box" name="effectShow" id="checkbox4" value="glasses"/></p>
+			<p style="color : #fff">Mask 2d<input type="radio" class="js-radio-box" name="effectShow" id="checkbox3" value="mask" checked/></p>
+			<button id="btn-input-img">Play with image</button>
+			<button id="btn-input-video">Play with video</button>
+			<button id="btn-input-webcam">Play with webcam</button>
+		</div>
+		<div class="mediapipe__container hidden" id="playground">
+			<div class="mediapipe__material-img active">
+				<img id="mediapipe-image-input" src="assets/mediapipe/multi-faces.jpg"/>
+			</div>
+            <div class="mediapipe__material-vid">
+                <video id="mediapipe-vid-input" crossOrigin="anonymous" playsinline muted controls>
+                    <source src="assets/mediapipe/720p-face-3.mp4" type="video/mp4" />
+                </video>
+            </div>
+			<div class="mediapipe__canvas">
+                <canvas id="mediapipe-output" width="1280px" height="720px"></canvas>
+            </div>
+		</div>
+		<div class="mediapipe__masks2d">
+		<h4 style="color : #fff">Mask sample</h4>
+			<img id="mediapipe-face-place-holder" src="assets/mediapipe/face-place-holder.png"/>
+		</div>
+		<div class="hidden">
+			<img id="mediapipe-text-1" src="assets/mediapipe/text-banner-1.jpg"/>
+			<img id="mediapipe-text-2" src="assets/mediapipe/text-banner-2.jpg"/>
+		</div>
+	</main>
+			<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+	    <!-- ... -->
+    <footer></footer>
+    
+    <script src="assets/js/app.js"></script>
+
+	
+
+    
+
+</body>
+
+</html>
